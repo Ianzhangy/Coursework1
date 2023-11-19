@@ -11,13 +11,13 @@ This RPG game is a text-based C++ console-based game, it allows players to creat
 
 ## UML Design Diagram
 
-###Class diagram
+Class diagram
 https://github.com/Ianzhangy/Coursework1/blob/main/class%20diagram.png
 
-###Use Case diagram
+Use Case diagram
 https://github.com/Ianzhangy/Coursework1/blob/main/use%20case%20diagram.png
 
-###Activity diagram
+Ativity diagram
 https://github.com/Ianzhangy/Coursework1/blob/main/activity%20diagram.png
 
 ## Game Exception Handling and Test Cases
