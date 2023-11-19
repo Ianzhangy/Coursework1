@@ -1,6 +1,6 @@
 # HERO RPG Game 
 
-## Development Environment
+## Game Development Environment
 
 - **Visual Studio Version:** [17.1.2]
 - **Operating System:** [Windows 10 Home Chinese Version]
@@ -11,14 +11,21 @@ This RPG game is a text-based C++ console-based game, it allows players to creat
 
 ## UML Design Diagram
 
-[Include a link or attach an image of your UML diagram here]
+###Class diagram
+https://github.com/Ianzhangy/Coursework1/blob/main/class%20diagram.png
 
-## Exception Handling and Test Cases
+###Use Case diagram
+https://github.com/Ianzhangy/Coursework1/blob/main/use%20case%20diagram.png
 
-- The code appears to handle user input errors during character creation and map level selection.
-- Test cases should cover scenarios like character creation, combat outcomes, level progression, and potential edge cases.
+###Activity diagram
+https://github.com/Ianzhangy/Coursework1/blob/main/activity%20diagram.png
 
-## Further Details
+## Game Exception Handling and Test Cases
+
+- The code use do while to handle user input errors during character creation and map level selection.
+- Test cases cover scenarios like character creation, combat outcomes, level progression, and potential edge cases.
+
+## Game Further Details
 
 - **Initialization:** Players initialize their character by entering a name and choosing a role (Warrior, Mage, or Hunter).
 - **Map Levels:** Players can choose a map level, with a maximum level of 100. The higher the level, the more challenging the monsters.
@@ -31,4 +38,4 @@ This RPG game is a text-based C++ console-based game, it allows players to creat
 
 ## Game Git Repository
 
-[Include a link to your game's Git repository]
+https://github.com/Ianzhangy/Coursework1
