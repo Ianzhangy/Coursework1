@@ -29,7 +29,7 @@ public:
 
 private:
     // Private attributes of the monster class
-    std::string monster1="Goblin";
+    std::string monster1="Smile";
     int m_level;
     int m_hp;
     int m_Mhp;
