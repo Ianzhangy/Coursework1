@@ -41,17 +41,13 @@ b. Choose map input a, and verify whether to return to the main menu. √ <br>
 c. Choose map input *, and verify whether to return to the main menu. √ <br>
 d. Enter map level 1, and verify if the generated monster's attributes are correct. √ <br>
 e. Enter map level 100, and verify if the generated monster's attributes are correct. √ <br>
-
-
-
-
-- 4.**Role Level Up:** <br>
+- 4.**Combat Scene:** <br>
+a. Enter combat, choose to attack, verify the fight result, and check player and monster health points. √ <br>
+b. Enter combat, choose to defend, Verify the battle result and check player and monster health points. √ <br>
+- 5.**Role Level Up:** <br>
 a. Set role get 100 experience points, verify if the character's level, health points, etc. have been correctly upgraded by level 1 to level 2. √ <br>
 b. Set role get 1000 experience points, verify if the character's level, health points, etc. have been correctly upgraded by level 1 to level 4. √ <br>
-
-
-
-- 5.**Return to Main Menu and Exit:** <br>
+- 6.**Return to Main Menu and Exit:** <br>
 a. Test whether it is possible to return to the main menu from each stage. √ <br>
 b. Test selecting exit and check if the game exits correctly. √ <br>
 
