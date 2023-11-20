@@ -25,9 +25,9 @@ https://github.com/Ianzhangy/Coursework1/blob/main/activity%20diagram.png
 - The code use do while to handle user input errors during character creation and map level selection.
 - Test cases cover scenarios like character creation, combat outcomes, level progression, and potential edge cases.
 - 1.**Initialization:**
-a. Input letter for name, after can display. √
-b. Input number for name, after can display. √
-c. Input symbol for name, after can display. √
+a. Input letter for name, after can display. √ <br>
+b. Input number for name, after can display. √ <br>
+c. Input symbol for name, after can display. √ <br>
 - 2.**Role Selection:**
 a. Input 1 to choose a warrior, and verify if the warrior's attributes are correctly set in the attribute of the main menu. √
 b. Input 2 to choose a mage, and verify if the mage's attributes are correctly set in the attribute of the main menu. √
