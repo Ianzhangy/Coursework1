@@ -1,4 +1,4 @@
-# HERO RPG Game 
+# Dark Island HERO RPG Game 
 
 ## Game Development Environment
 
