@@ -291,7 +291,7 @@ void Result(player& Player, monster& Monster) {
         }
         else if (Monster.getm_Hp() <= 0) {
             cout << "Congratulations on finally defeating the monster Boss! You save the whole world!" << endl;
-            expr += Monster.getMexpr();
+            expr = Player.getexpr() + Monster.getMexpr();
             Player.setexpr(expr);
         }
     }
@@ -304,7 +304,7 @@ void Result(player& Player, monster& Monster) {
         }
         else if (Monster.getm_Hp() <= 0) {
             cout << "You win!" << endl;
-            expr += Monster.getMexpr();
+            expr = Player.getexpr() + Monster.getMexpr();
             Player.setexpr(expr);
         }
     }
