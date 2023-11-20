@@ -7,7 +7,7 @@
 
 ## Gameplay Overview
 
-This RPG game is a text-based C++ console-based game, it allows players to create a character, choose a role, and embark on an adventure through different map levels. The game features turn-based combat against monsters, with the goal of defeating them and progressing through the levels.
+This RPG game is a text-based C++ console-based game, it allows players to create a character, choose a role, and embark on an adventure through different map levels. The game features turn-based combat against monsters, with the goal of defeating them and progressing through the levels.  Finally, defeat the 100th level boss and save the world.
 
 ## UML Design Diagram
 
