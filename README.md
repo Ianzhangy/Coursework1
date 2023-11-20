@@ -35,10 +35,13 @@ c. Input 3 to choose a hunter, and verify if the hunter's attributes are correct
 d. input 4, and display Enter error! Please enter again. √ <br>
 e. input a, and display Enter error! Please enter again. √ <br>
 f. input *, and display Enter error! Please enter again. √ <br>
+- 4.**Role Level Up:** <br>
+a. Set role get 100 experience points, verify if the character's level, health points, etc. have been correctly upgraded by level 1 to level 2. √ <br>
+b. Set role get 1000 experience points, verify if the character's level, health points, etc. have been correctly upgraded by level 1 to level 4. √ <br>
 
 
 
-- 5. **Return to Main Menu and Exit:** <br>
+- 5.**Return to Main Menu and Exit:** <br>
 a. Test whether it is possible to return to the main menu from each stage. √ <br>
 b. Test selecting exit and check if the game exits correctly. √ <br>
 
