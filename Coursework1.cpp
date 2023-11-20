@@ -24,7 +24,7 @@ void InitialMenu(player& Player) {
     Player.setName(name);
     do {
         cout << name << " " << "Please choose your role：" << endl;
-        cout << "1.Warrior" << " " << "2.Mage" << " " << "3.Summoner\t" << endl;
+        cout << "1.Warrior" << " " << "2.Mage" << " " << "3.Hunter\t" << endl;
         cin >> selection;
         cin.clear(); cin.ignore(100, '\n');
 
