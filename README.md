@@ -34,7 +34,7 @@ https://github.com/Ianzhangy/Coursework1/blob/main/activity%20diagram.png
 
 ## Video Link
 
-[Include a link to an unlisted YouTube video demonstrating your game]
+https://www.youtube.com/watch?v=aHuFO0mz7os
 
 ## Game Git Repository
 
