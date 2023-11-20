@@ -136,11 +136,11 @@ void MonsterData(monster& Monster) {
     else {
         m_hp = maplevel * 50;
         Monster.setm_Hp(m_hp);
-        m_Mhp = maplevel * 50;
+        m_Mhp = maplevel * 60;
         Monster.setm_MHp(m_Mhp);
-        m_Ap = maplevel * 2;
+        m_Ap = maplevel * 6;
         Monster.setm_Ap(m_Ap);
-        m_Dp = maplevel * 2;
+        m_Dp = maplevel * 6;
         Monster.setm_Dp(m_Dp);
         mexpr = maplevel * 50;
         Monster.setMexpr(mexpr);
@@ -161,48 +161,35 @@ void MonsterData(monster& Monster) {
 //Determine the damage suffered by the monster
 void MWetherWounded(int RandomNumber, player& Player, monster& Monster) {
     int m_hp;
-    if (Player.getAp() - Monster.getm_Dp() <= 0) {
-        cout << Monster.getMonster1() << " hp-0" << endl;
-        cout << "|||||||||||||||||||||||||||||||||" << endl;
-    }
-    else {
-        if (RandomNumber == 1) {
+        if (RandomNumber == 1 && command ==1) {
             cout << Monster.getMonster1() << " hp-" << (Player.getAp() - (Monster.getm_Dp() / 2)) << endl;
             m_hp = Monster.getm_Hp() - (Player.getAp() - (Monster.getm_Dp() / 2));
             Monster.setm_Hp(m_hp);
             cout << "|||||||||||||||||||||||||||||||||" << endl;
         }
-        else if (RandomNumber == 2) {
+        else if (RandomNumber == 2 && command == 1) {
             cout << Monster.getMonster1() << " hp-" << (Player.getAp() - Monster.getm_Dp()) << endl;
             m_hp = Monster.getm_Hp() - (Player.getAp() - Monster.getm_Dp());
             Monster.setm_Hp(m_hp);
             cout << "|||||||||||||||||||||||||||||||||" << endl;
         }
-    }
-
 }
 
 //Determine the damage suffered by the player
-void PWetherWounded(player& Player, monster& Monster) {
+void PWetherWounded(player& Player, monster& Monster, int& randomNumber) {
     int hp;
-    if (Monster.getm_Ap() - Player.getDp() <= 0) {
-        cout << Player.getName() << " hp-0" << endl;
-        cout << "|||||||||||||||||||||||||||||||||" << endl;
-    }
-    else {
-        if (command == 1) {
+        if (command == 1 && randomNumber == 1) {
             cout << Player.getName() << " hp-" << (Monster.getm_Ap() - Player.getDp() / 2) << endl;
             hp = Player.getHp() - (Monster.getm_Ap() - (Player.getDp() / 2));
             Player.setHp(hp);
             cout << "|||||||||||||||||||||||||||||||||" << endl;
         }
-        else if (command == 2) {
+        else if (command == 2 && randomNumber == 1) {
             cout << Player.getName() << " hp-" << (Monster.getm_Ap() - Player.getDp()) << endl;
             hp = Player.getHp() - (Monster.getm_Ap() - Player.getDp());
             Player.setHp(hp);
             cout << "|||||||||||||||||||||||||||||||||" << endl;
         }
-    }
 }
 
 //Random generate monster action instructions
@@ -217,13 +204,13 @@ void MonsterActionBuild(player& Player, monster& Monster) {
             cout << Player.getName() << " choose attack--" << Monster.getMonster1() << endl;
             cout << Monster.getMonster1() << " choose attack--" << Player.getName() << endl;
             MWetherWounded(RandomNumber, Player, Monster);
-            PWetherWounded(Player, Monster);
+            PWetherWounded(Player, Monster, RandomNumber);
             break;
         case 2:
             cout << Player.getName() << " choose attack--" << Monster.getMonster1() << endl;
             cout << Monster.getMonster1() << " choose defense--" << Player.getName() << endl;
             MWetherWounded(RandomNumber, Player, Monster);
-            PWetherWounded(Player, Monster);
+            PWetherWounded(Player, Monster, RandomNumber);
             break;
         }
     }
@@ -233,7 +220,7 @@ void MonsterActionBuild(player& Player, monster& Monster) {
             cout << Player.getName() << " choose defense--" << Monster.getMonster1() << endl;
             cout << Monster.getMonster1() << " choose attack--" << Player.getName() << endl;
             MWetherWounded(RandomNumber, Player, Monster);
-            PWetherWounded(Player, Monster);
+            PWetherWounded(Player, Monster, RandomNumber);
             break;
         case 2:
             cout << Player.getName() << " choose defense--" << Monster.getMonster1() << endl;
@@ -266,9 +253,17 @@ void PVEFight(player& Player, monster& Monster) {
         cin >> command;
         if (command == 1) {
             MonsterActionBuild(Player, Monster);
+            if (Player.getAp() <= (Monster.getm_Dp()/2) && Monster.getm_Ap() <= (Player.getDp()/2)) {
+                cout << "You and the monster cannot break each other's defense and cause damage, so you choose to retreat simultaneously with the monster." << endl;
+                break;
+            }
         }
         else if (command == 2) {
             MonsterActionBuild(Player, Monster);
+            if (Player.getAp() <= (Monster.getm_Dp()/2) && Monster.getm_Ap() <= (Player.getDp()/2)) {
+                cout << "You and the monster cannot break each other's defense and cause damage, so you choose to retreat simultaneously with the monster." << endl;
+                break;
+            }
         }
         else {
             cout << "Command error! Please enter again!" << endl;
@@ -329,13 +324,13 @@ void WhetherUplevel(player& Player, monster& Monster) {
         Player.setexpr(expr);
         Maxexpr = Player.getMaxexpr() + (level * 100);
         Player.setMaxexpr(Maxexpr);
-        Maxhp = Player.getMaxHp() + (level * 10);
+        Maxhp = Player.getMaxHp() + (level * 60);
         Player.setMaxHp(Maxhp);
-        hp = Player.getHp() + (level * 10);
+        hp = Player.getHp() + (level * 6);
         Player.setHp(hp);
-        Ap = Player.getAp() + (level * 10);
+        Ap = Player.getAp() + (level * 6);
         Player.setAp(Ap);
-        Dp = Player.getDp() + (level * 10);
+        Dp = Player.getDp() + (level * 6);
         Player.setDp(Dp);
         hp = Player.getMaxHp();
         Player.setHp(hp);
