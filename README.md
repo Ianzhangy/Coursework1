@@ -24,17 +24,24 @@ https://github.com/Ianzhangy/Coursework1/blob/main/activity%20diagram.png
 
 - The code use do while to handle user input errors during character creation and map level selection.
 - Test cases cover scenarios like character creation, combat outcomes, level progression, and potential edge cases.
-- 1.**Initialization:**
+- 1.**Initialization:** <br>
 a. Input letter for name, after can display. √ <br>
 b. Input number for name, after can display. √ <br>
 c. Input symbol for name, after can display. √ <br>
-- 2.**Role Selection:**
-a. Input 1 to choose a warrior, and verify if the warrior's attributes are correctly set in the attribute of the main menu. √
-b. Input 2 to choose a mage, and verify if the mage's attributes are correctly set in the attribute of the main menu. √
-c. Input 3 to choose a hunter, and verify if the hunter's attributes are correctly set in the attribute of the main menu. √
-d. input 4, and display Enter error! Please enter again. √
-e. input a, and display Enter error! Please enter again. √
-f. input *, and display Enter error! Please enter again. √
+- 2.**Role Selection:** <br>
+a. Input 1 to choose a warrior, and verify if the warrior's attributes are correctly set in the attribute of the main menu. √ <br>
+b. Input 2 to choose a mage, and verify if the mage's attributes are correctly set in the attribute of the main menu. √ <br>
+c. Input 3 to choose a hunter, and verify if the hunter's attributes are correctly set in the attribute of the main menu. √ <br>
+d. input 4, and display Enter error! Please enter again. √ <br>
+e. input a, and display Enter error! Please enter again. √ <br>
+f. input *, and display Enter error! Please enter again. √ <br>
+
+
+
+- 5. **Return to Main Menu and Exit:** <br>
+a. Test whether it is possible to return to the main menu from each stage. √ <br>
+b. Test selecting exit and check if the game exits correctly. √ <br>
+
 
 ## Game Further Details
 
