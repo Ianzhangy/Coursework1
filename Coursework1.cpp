@@ -1,4 +1,4 @@
-﻿#include <iostream>
+#include <iostream>
 #include "player.h"
 #include "monster.h"
 
@@ -138,9 +138,9 @@ void MonsterData(monster& Monster) {
         Monster.setm_Hp(m_hp);
         m_Mhp = maplevel * 50;
         Monster.setm_MHp(m_Mhp);
-        m_Ap = maplevel * 10;
+        m_Ap = maplevel * 2;
         Monster.setm_Ap(m_Ap);
-        m_Dp = maplevel * 10;
+        m_Dp = maplevel * 2;
         Monster.setm_Dp(m_Dp);
         mexpr = maplevel * 50;
         Monster.setMexpr(mexpr);
@@ -286,7 +286,7 @@ void Result(player& Player, monster& Monster) {
         if (Player.getHp() <= 0) {
             cout << "You fail!" << endl;
             m_hp = Monster.getm_MHp();
-            expr = Player.getexpr() + (maplevel * 50);
+            expr = Player.getexpr() + (maplevel * 20);
             Player.setexpr(expr);
         }
         else if (Monster.getm_Hp() <= 0) {
@@ -312,7 +312,7 @@ void Result(player& Player, monster& Monster) {
 }
 
 // Function to check if the player should level up
-void WhetherUplevel(player& Player) {
+void WhetherUplevel(player& Player, monster& Monster) {
     int level;
     int expr;
     int Maxexpr;
@@ -320,6 +320,8 @@ void WhetherUplevel(player& Player) {
     int hp;
     int Ap;
     int Dp;
+    expr = Player.getexpr() + Monster.getMexpr();
+    Player.setexpr(expr);
     if (Player.getexpr() >= Player.getMaxexpr()) {
         level = Player.getLevel() + 1;
         Player.setLevel(level);
@@ -327,13 +329,13 @@ void WhetherUplevel(player& Player) {
         Player.setexpr(expr);
         Maxexpr = Player.getMaxexpr() + (level * 100);
         Player.setMaxexpr(Maxexpr);
-        Maxhp = Player.getMaxHp() + (level * 50);
+        Maxhp = Player.getMaxHp() + (level * 10);
         Player.setMaxHp(Maxhp);
-        hp = Player.getHp() + (level * 50);
+        hp = Player.getHp() + (level * 10);
         Player.setHp(hp);
-        Ap = Player.getAp() + (level * 2);
+        Ap = Player.getAp() + (level * 10);
         Player.setAp(Ap);
-        Dp = Player.getDp() + (level * 2);
+        Dp = Player.getDp() + (level * 10);
         Player.setDp(Dp);
         hp = Player.getMaxHp();
         Player.setHp(hp);
@@ -376,7 +378,7 @@ int main()
                         PVEFight(Player, Monster);
                         Result(Player, Monster);
                         do {
-                            WhetherUplevel(Player);
+                            WhetherUplevel(Player,Monster);
                         } while (Player.getexpr() >= Player.getMaxexpr());
                         cout << "Enter any values can return main menu!" << endl;
                         cin >> r;
