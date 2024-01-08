@@ -65,4 +65,4 @@ https://www.youtube.com/watch?v=aHuFO0mz7os
 
 ## Game Git Repository
 
-https://github.com/Ianzhangy/Coursework1
+https://github.com/YinianZhang/Coursework1
